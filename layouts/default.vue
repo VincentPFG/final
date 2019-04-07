@@ -47,6 +47,12 @@ export default
             new item 'Bidule',
                 'home'
                 'bidule'
+            new item 'Test Dark',
+                'edit'
+                'test_dark'
+            new item 'Test API',
+                'public'
+                'test-api'
         ]
         dark: on
 </script>
