@@ -22,6 +22,8 @@ div
     v-card-actions
       v-btn.success.warning--text(nuxt to='truc') Truc
       v-btn.orange--text(nuxt to='muche' flat) Muche
+  v-btn(fixed fab right bottom app)
+    v-icon add
 </template>
 
 <script lang='coffee'>

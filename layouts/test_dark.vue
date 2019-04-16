@@ -12,7 +12,7 @@ v-app(:dark='dark')
         v-toolbar-title Le Titre
         v-spacer
         v-toolbar-items
-            dark
+            dark(v-model='dark')
     v-content
         v-container
             nuxt

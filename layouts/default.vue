@@ -12,25 +12,25 @@ v-app(:dark='dark')
         v-toolbar-title Le Titre
         v-spacer
         v-toolbar-items
-            v-btn(flat icon @click='dark = !dark')
-                v-icon(v-if='dark') brightness_5
-                v-icon(v-else) brightness_2
+            dark(v-model='dark')
     v-content
         v-container
             nuxt
-    v-footer(app absolute).primary
+    v-footer(app ).primary
         v-layout
             v-flex(text-xs-center) &copy;2019 -- #[strong Vuetify]
-    v-bottom-nav(app value='true' shift)
+    // v-bottom-nav(app value='true' shift)
         v-btn(v-for='item in items' :to='item.path')
             span {{item.name}}
             v-icon {{item.icon}}
 </template>
 
 <script lang='coffee'>
+import dark from '~/components/dark'
 class item
     constructor: (@name, @icon, @path) ->
 export default
+    components: {dark}
     data: ->
         drawer: null
         active: null
@@ -53,6 +53,9 @@ export default
             new item 'Test API',
                 'public'
                 'test-api'
+            new item 'Chose',
+                'phone'
+                'chose'
         ]
         dark: on
 </script>

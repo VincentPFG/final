@@ -1,5 +1,9 @@
+// ça marche pas parce que la valeur dark nest pas accessible
+// il faut soit limporter par le store
+// soit modeler le composant
+
 <template lang='pug'>
-dark
+dark(v-model='dark')
 </template>
 
 <script lang='coffee'>
