@@ -16,10 +16,10 @@ v-app(:dark='dark')
     v-content
         v-container
             nuxt
-    v-footer(app ).primary
+    v-footer(app).primary
         v-layout
             v-flex(text-xs-center) &copy;2019 -- #[strong Vuetify]
-    // v-bottom-nav(app value='true' shift)
+    v-bottom-nav(app value='true' shift)
         v-btn(v-for='item in items' :to='item.path')
             span {{item.name}}
             v-icon {{item.icon}}
